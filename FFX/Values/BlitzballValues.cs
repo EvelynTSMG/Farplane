@@ -337,6 +337,7 @@ namespace Farplane.FFX.Values
             new BlitzballValue() {Index = 0x04, Name = "New Tournament"},
             new BlitzballValue() {Index = 0x05, Name = "New Tournament"},
             new BlitzballValue() {Index = 0x06, Name = "New Tournament"},
+            new BlitzballValue() {Index = 0x07, Name = "New Tournament"},
             new BlitzballValue() {Index = 0x14, Name = "Round 1"},
             new BlitzballValue() {Index = 0x15, Name = "Round 2"},
             new BlitzballValue() {Index = 0x16, Name = "Round 3"},
