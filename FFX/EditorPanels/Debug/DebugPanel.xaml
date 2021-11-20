@@ -1,0 +1,53 @@
+<UserControl x:Class="Farplane.FFX.EditorPanels.Debug.DebugPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             d:DesignHeight="550"
+             d:DesignWidth="480"
+             mc:Ignorable="d">
+	<UserControl.Resources>
+		<Style x:Key="myHeaderStyle" TargetType="{x:Type GridViewColumnHeader}">
+			<Setter Property="Visibility" Value="Collapsed" />
+		</Style>
+	</UserControl.Resources>
+	<GroupBox Header="Debug Options">
+		<Grid>
+			<CheckBox Name="EnemiesInvincible" Content="Enemies invincible" HorizontalAlignment="Left" Margin="2,2,0,0" VerticalAlignment="Top"/>
+			<CheckBox Name="AlliesInvincible" Content="Allies invincible" HorizontalAlignment="Left" Margin="2,24,0,0" VerticalAlignment="Top"/>
+			<CheckBox Content="Control Enemies" HorizontalAlignment="Left" Margin="2,46,0,0" VerticalAlignment="Top"/>
+			<CheckBox Content="Control camera with gamepad" HorizontalAlignment="Left" Margin="2,68,0,0" VerticalAlignment="Top"/>
+			<CheckBox Content="Overdrive always available" HorizontalAlignment="Left" Margin="2,90,0,0" VerticalAlignment="Top"/>
+			<CheckBox Content="Always critical hit" HorizontalAlignment="Left" Margin="2,112,0,0" VerticalAlignment="Top"/>
+			<CheckBox Content="Everything hits for 1" HorizontalAlignment="Left" Margin="2,134,0,0" VerticalAlignment="Top"/>
+			<CheckBox Content="Everything hits for 10000" HorizontalAlignment="Left" Margin="2,156,0,0" VerticalAlignment="Top"/>
+			<CheckBox Content="Everything hits for 99999" HorizontalAlignment="Left" Margin="2,178,0,0" VerticalAlignment="Top"/>
+			<CheckBox Content="Always rare drop and steal" HorizontalAlignment="Left" Margin="2,200,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.12,-0.507"/>
+			<CheckBox Content="Battle AP x100" HorizontalAlignment="Left" Margin="2,222,0,0" VerticalAlignment="Top"/>
+			<CheckBox Content="Battle gil x100" HorizontalAlignment="Left" Margin="2,244,0,0" VerticalAlignment="Top"/>
+			<CheckBox Content="Sensor always enabled" HorizontalAlignment="Left" Margin="2,266,0,0" VerticalAlignment="Top"/>
+			<CheckBox Name="UnknownFlags" Content="Shown unknown flags (Warning!)" HorizontalAlignment="Left" Margin="2,293,0,0" VerticalAlignment="Top" Checked="UnknownFlags_Checked" Unchecked="UnknownFlags_Checked"/>
+			<TextBlock Name="UnknownWarning" Visibility="Hidden" HorizontalAlignment="Left" Margin="5,315,0,0" TextWrapping="Wrap" Text="Unknown flags may crash your game or cause glitches. If you find out what a flag does, please include the Farlane version number when making a report." VerticalAlignment="Top" Width="252"/>
+			<CheckBox Name="Unknown01" Content="Unknown 1" HorizontalAlignment="Left" Margin="271,2,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+			<CheckBox Name="Unknown02" Content="Unknown 2" HorizontalAlignment="Left" Margin="271,24,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+			<CheckBox Name="Unknown03" Content="Unknown 3" HorizontalAlignment="Left" Margin="271,46,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+			<CheckBox Name="Unknown04" Content="Unknown 4" HorizontalAlignment="Left" Margin="271,68,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+			<CheckBox Name="Unknown05" Content="Unknown 5" HorizontalAlignment="Left" Margin="271,90,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+			<CheckBox Name="Unknown06" Content="Unknown 6" HorizontalAlignment="Left" Margin="271,112,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+			<CheckBox Name="Unknown07" Content="Unknown 7" HorizontalAlignment="Left" Margin="271,134,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+			<CheckBox Name="Unknown08" Content="Unknown 8" HorizontalAlignment="Left" Margin="271,156,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+			<CheckBox Name="Unknown09" Content="Unknown 9" HorizontalAlignment="Left" Margin="271,178,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+			<CheckBox Name="Unknown10" Content="Unknown 10" HorizontalAlignment="Left" Margin="271,200,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+			<CheckBox Name="Unknown11" Content="Unknown 11" HorizontalAlignment="Left" Margin="271,222,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+			<CheckBox Name="Unknown12" Content="Unknown 12" HorizontalAlignment="Left" Margin="271,244,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+			<CheckBox Name="Unknown13" Content="Unknown 13" HorizontalAlignment="Left" Margin="271,266,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+			<CheckBox Name="Unknown14" Content="Unknown 14" HorizontalAlignment="Left" Margin="271,288,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+			<CheckBox Name="Unknown15" Content="Unknown 15" HorizontalAlignment="Left" Margin="271,310,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+			<CheckBox Name="Unknown16" Content="Unknown 16" HorizontalAlignment="Left" Margin="271,332,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+			<CheckBox Name="Unknown17" Content="Unknown 17" HorizontalAlignment="Left" Margin="271,354,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+			<CheckBox Name="Unknown18" Content="Unknown 18" HorizontalAlignment="Left" Margin="271,376,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+			<CheckBox Name="Unknown19" Content="Unknown 19" HorizontalAlignment="Left" Margin="271,398,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+			<CheckBox Name="Unknown20" Content="Unknown 20" HorizontalAlignment="Left" Margin="271,420,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+		</Grid>
+	</GroupBox>
+</UserControl>
