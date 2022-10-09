@@ -13,41 +13,45 @@
 	</UserControl.Resources>
 	<GroupBox Header="Debug Options">
 		<Grid>
-			<CheckBox Name="EnemiesInvincible" Content="Enemies invincible" HorizontalAlignment="Left" Margin="2,2,0,0" VerticalAlignment="Top"/>
-			<CheckBox Name="AlliesInvincible" Content="Allies invincible" HorizontalAlignment="Left" Margin="2,24,0,0" VerticalAlignment="Top"/>
-			<CheckBox Content="Control Enemies" HorizontalAlignment="Left" Margin="2,46,0,0" VerticalAlignment="Top"/>
-			<CheckBox Content="Control camera with gamepad" HorizontalAlignment="Left" Margin="2,68,0,0" VerticalAlignment="Top"/>
-			<CheckBox Content="Lock camera in battle" HorizontalAlignment="Left" Margin="2,90,0,0" VerticalAlignment="Top"/>
-			<CheckBox Content="Overdrive always available" HorizontalAlignment="Left" Margin="2,112,0,0" VerticalAlignment="Top"/>
-			<CheckBox Content="Always critical hit" HorizontalAlignment="Left" Margin="2,134,0,0" VerticalAlignment="Top"/>
-			<CheckBox Content="Everything hits for 1" HorizontalAlignment="Left" Margin="2,156,0,0" VerticalAlignment="Top"/>
-			<CheckBox Content="Everything hits for 10000" HorizontalAlignment="Left" Margin="2,178,0,0" VerticalAlignment="Top"/>
-			<CheckBox Content="Everything hits for 99999" HorizontalAlignment="Left" Margin="2,200,0,0" VerticalAlignment="Top"/>
-			<CheckBox Content="Always rare drop and steal" HorizontalAlignment="Left" Margin="2,222,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.12,-0.507"/>
-			<CheckBox Content="Battle AP x100" HorizontalAlignment="Left" Margin="2,244,0,0" VerticalAlignment="Top"/>
-			<CheckBox Content="Battle gil x100" HorizontalAlignment="Left" Margin="2,266,0,0" VerticalAlignment="Top"/>
-			<CheckBox Content="Sensor always enabled" HorizontalAlignment="Left" Margin="2,288,0,0" VerticalAlignment="Top"/>
-			<CheckBox Name="UnknownFlags" Content="Shown unknown flags (Warning!)" HorizontalAlignment="Left" Margin="2,315,0,0" VerticalAlignment="Top" Checked="UnknownFlags_Checked" Unchecked="UnknownFlags_Checked"/>
-			<TextBlock Name="UnknownWarning" Visibility="Hidden" HorizontalAlignment="Left" Margin="5,337,0,0" TextWrapping="Wrap" Text="Unknown flags may crash your game or cause glitches. If you find out what a flag does, please include the Farlane version number when making a report." VerticalAlignment="Top" Width="252"/>
-			<CheckBox Name="Unknown01" Content="Unknown 1" HorizontalAlignment="Left" Margin="271,2,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
-			<CheckBox Name="Unknown02" Content="Unknown 2" HorizontalAlignment="Left" Margin="271,24,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
-			<CheckBox Name="Unknown03" Content="Unknown 3" HorizontalAlignment="Left" Margin="271,46,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
-			<CheckBox Name="Unknown04" Content="Unknown 4" HorizontalAlignment="Left" Margin="271,68,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
-			<CheckBox Name="Unknown05" Content="Unknown 5" HorizontalAlignment="Left" Margin="271,90,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
-			<CheckBox Name="Unknown06" Content="Unknown 6" HorizontalAlignment="Left" Margin="271,112,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
-			<CheckBox Name="Unknown07" Content="Unknown 7" HorizontalAlignment="Left" Margin="271,134,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
-			<CheckBox Name="Unknown08" Content="Unknown 8" HorizontalAlignment="Left" Margin="271,156,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
-			<CheckBox Name="Unknown09" Content="Unknown 9" HorizontalAlignment="Left" Margin="271,178,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
-			<CheckBox Name="Unknown10" Content="Unknown 10" HorizontalAlignment="Left" Margin="271,200,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
-			<CheckBox Name="Unknown11" Content="Unknown 11" HorizontalAlignment="Left" Margin="271,222,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
-			<CheckBox Name="Unknown12" Content="Unknown 12" HorizontalAlignment="Left" Margin="271,244,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
-			<CheckBox Name="Unknown13" Content="Unknown 13" HorizontalAlignment="Left" Margin="271,266,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
-			<CheckBox Name="Unknown14" Content="Unknown 14" HorizontalAlignment="Left" Margin="271,288,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
-			<CheckBox Name="Unknown15" Content="Unknown 15" HorizontalAlignment="Left" Margin="271,310,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
-			<CheckBox Name="Unknown16" Content="Unknown 16" HorizontalAlignment="Left" Margin="271,332,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
-			<CheckBox Name="Unknown17" Content="Unknown 17" HorizontalAlignment="Left" Margin="271,354,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
-			<CheckBox Name="Unknown18" Content="Unknown 18" HorizontalAlignment="Left" Margin="271,376,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
-			<CheckBox Name="Unknown19" Content="Unknown 19" HorizontalAlignment="Left" Margin="271,398,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+			<CheckBox Name="CheckPartyInvincible" Content="Allies invincible" HorizontalAlignment="Left" Margin="2,2,0,0" VerticalAlignment="Top" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="CheckEnemiesInvincible" Content="Enemies invincible" HorizontalAlignment="Left" Margin="271,2,0,0" VerticalAlignment="Top" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="CheckControlEnemies" Content="Control Enemies" HorizontalAlignment="Left" Margin="2,24,0,0" VerticalAlignment="Top" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="CheckGamepadCam" Content="Control camera with gamepad" HorizontalAlignment="Left" Margin="271,24,0,0" VerticalAlignment="Top" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="CheckLockBattleCam" Content="Lock camera in battle" HorizontalAlignment="Left" Margin="2,46,0,0" VerticalAlignment="Top" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="CheckAlwaysOverdrive" Content="Overdrive always available" HorizontalAlignment="Left" Margin="271,46,0,0" VerticalAlignment="Top" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="CheckCrits" Content="Always critical hit" HorizontalAlignment="Left" Margin="2,68,0,0" VerticalAlignment="Top" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="CheckNoCrits" Content="Never critical hit" HorizontalAlignment="Left" Margin="271,68,0,0" VerticalAlignment="Top" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="CheckNoRandomDmg" Content="No random damage" HorizontalAlignment="Left" Margin="2,90,0,0" VerticalAlignment="Top" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="CheckDamage1" Content="Everything hits for 1" HorizontalAlignment="Left" Margin="271,90,0,0" VerticalAlignment="Top" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="CheckDamage9999" Content="Everything hits for 10000" HorizontalAlignment="Left" Margin="2,112,0,0" VerticalAlignment="Top" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="CheckDamage99999" Content="Everything hits for 99999" HorizontalAlignment="Left" Margin="271,112,0,0" VerticalAlignment="Top" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="CheckNoOverkill" Content="No overkill" HorizontalAlignment="Left" Margin="2,134,0,0" VerticalAlignment="Top" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="CheckDreamLuck" Content="Always rare drop and steal" HorizontalAlignment="Left" Margin="271,134,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.12,-0.507" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="CheckAPx100" Content="Battle AP x100" HorizontalAlignment="Left" Margin="2,156,0,0" VerticalAlignment="Top" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="CheckGilx100" Content="Battle gil x100" HorizontalAlignment="Left" Margin="271,156,0,0" VerticalAlignment="Top" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="CheckAlwaysInfo" Content="Sensor always enabled" HorizontalAlignment="Left" Margin="2,178,0,0" VerticalAlignment="Top" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="UnknownFlags" Content="Shown unknown flags" HorizontalAlignment="Left" Margin="2,200,0,0" VerticalAlignment="Top" Checked="UnknownFlags_Checked" Unchecked="UnknownFlags_Checked"/>
+			<TextBlock Name="UnknownWarning" Visibility="Hidden" HorizontalAlignment="Center" Margin="50,450,0,0" TextWrapping="Wrap" Text="Warning! Unknown flags may crash your game or cause glitches. If you find out what a flag does, please include the Farlane version number when making a report." VerticalAlignment="Top" Width="252"/>
+			<CheckBox Name="Unknown01" Content="Unknown 1" HorizontalAlignment="Left" Margin="2,222,0,0" VerticalAlignment="Top" Visibility="Hidden" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="Unknown02" Content="Unknown 2" HorizontalAlignment="Left" Margin="271,222,0,0" VerticalAlignment="Top" Visibility="Hidden" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="Unknown03" Content="Unknown 3" HorizontalAlignment="Left" Margin="2,244,0,0" VerticalAlignment="Top" Visibility="Hidden" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="Unknown04" Content="Unknown 4" HorizontalAlignment="Left" Margin="271,244,0,0" VerticalAlignment="Top" Visibility="Hidden" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="Unknown05" Content="Unknown 5" HorizontalAlignment="Left" Margin="2,266,0,0" VerticalAlignment="Top" Visibility="Hidden" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="Unknown06" Content="Unknown 6" HorizontalAlignment="Left" Margin="271,266,0,0" VerticalAlignment="Top" Visibility="Hidden" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="Unknown07" Content="Unknown 7" HorizontalAlignment="Left" Margin="2,288,0,0" VerticalAlignment="Top" Visibility="Hidden" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="Unknown08" Content="Unknown 8" HorizontalAlignment="Left" Margin="271,288,0,0" VerticalAlignment="Top" Visibility="Hidden" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="Unknown09" Content="Unknown 9" HorizontalAlignment="Left" Margin="2,312,0,0" VerticalAlignment="Top" Visibility="Hidden" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="Unknown10" Content="Unknown 10" HorizontalAlignment="Left" Margin="271,312,0,0" VerticalAlignment="Top" Visibility="Hidden" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="Unknown11" Content="Unknown 11" HorizontalAlignment="Left" Margin="2,334,0,0" VerticalAlignment="Top" Visibility="Hidden" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="Unknown12" Content="Unknown 12" HorizontalAlignment="Left" Margin="271,334,0,0" VerticalAlignment="Top" Visibility="Hidden" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="Unknown13" Content="Unknown 13" HorizontalAlignment="Left" Margin="2,356,0,0" VerticalAlignment="Top" Visibility="Hidden" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="Unknown14" Content="Unknown 14" HorizontalAlignment="Left" Margin="271,356,0,0" VerticalAlignment="Top" Visibility="Hidden" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="Unknown15" Content="Unknown 15" HorizontalAlignment="Left" Margin="2,378,0,0" VerticalAlignment="Top" Visibility="Hidden" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="Unknown16" Content="Unknown 16" HorizontalAlignment="Left" Margin="271,378,0,0" VerticalAlignment="Top" Visibility="Hidden" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="Unknown17" Content="Unknown 17" HorizontalAlignment="Left" Margin="2,400,0,0" VerticalAlignment="Top" Visibility="Hidden" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="Unknown18" Content="Unknown 18" HorizontalAlignment="Left" Margin="271,400,0,0" VerticalAlignment="Top" Visibility="Hidden" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="Unknown19" Content="Unknown 19" HorizontalAlignment="Left" Margin="2,422,0,0" VerticalAlignment="Top" Visibility="Hidden" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+			<CheckBox Name="Unknown20" Content="Unknown 20" HorizontalAlignment="Left" Margin="271,422,0,0" VerticalAlignment="Top" Visibility="Hidden" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
 		</Grid>
 	</GroupBox>
 </UserControl>
