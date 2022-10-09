@@ -37,7 +37,7 @@ namespace Farplane.FFX.EditorPanels.BlitzballPanel
             for (int i = 0; i < BlitzballValues.Teams.Length - 1; i++)
             {
                 var teamTab = new TabItem() {Header = BlitzballValues.Teams[i].Name};
-                ControlsHelper.SetHeaderFontSize(teamTab, 16);
+                teamTab.FontSize = 16;
                 TabTeam.Items.Add(teamTab);
             }
 

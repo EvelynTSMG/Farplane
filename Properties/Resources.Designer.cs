@@ -19,7 +19,7 @@ namespace Farplane.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -61,7 +61,42 @@ namespace Farplane.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to 
+        ///
+        ///
+        ///
+        ///
+        ///Thankyou for downloading Farplane!
+        ///
+        ///
+        ///
+        ///Farplane was developed by Topher Sheridan, but it would not
+        ///have been possible without support from the community.
+        ///
+        ///
+        ///
+        ///
+        ///Special thanks to those who have donated
+        ///
+        ///Thomas Lester
+        ///
+        ///
+        ///
+        ///
+        ///A huge thanks to the following contributors
+        ///
+        ///
+        ///starrylight, for providing a significant number of
+        ///creature names for FFX-2 creatures.
+        ///
+        ///
+        ///Chang Zhang for providing a significant number of
+        ///ability names for FFX-2.
+        ///
+        ///
+        ///
+        ///
+        ///Thanks to contributors from the following [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Credits {
             get {

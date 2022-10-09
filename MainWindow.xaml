@@ -16,7 +16,7 @@
                       ResizeMode="NoResize"
                       ShowIconOnTitleBar="False"
                       ShowMaxRestoreButton="False"
-                      TitleCaps="False"
+                      TitleCharacterCasing="Normal"
                       WindowStartupLocation="CenterScreen"
                       mc:Ignorable="d">
     <Controls:MetroWindow.RightWindowCommands>

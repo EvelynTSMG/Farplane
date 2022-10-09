@@ -38,7 +38,7 @@ namespace Farplane.FFX2.EditorPanels
                 tabCreature.Name = "Creature" + i;
                 tabCreature.Header = "Creature " + i;
                 tabCreature.Content = _editors[i];
-                ControlsHelper.SetHeaderFontSize(tabCreature, 12);
+                tabCreature.FontSize = 12;
                 TabCreatures.Items.Add(tabCreature);
             }
 

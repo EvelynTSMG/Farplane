@@ -31,8 +31,8 @@ namespace Farplane.FFX.EditorPanels.Aeons
         public AeonsPanel()
         {
             InitializeComponent();
-            foreach(var item in TabAeon.Items)
-                ControlsHelper.SetHeaderFontSize((TabItem)item, 14);
+            foreach (TabItem item in TabAeon.Items)
+                item.FontSize = 14;
             UpdateTabsEvent += () => Refresh();
         }
 

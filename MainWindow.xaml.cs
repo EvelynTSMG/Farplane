@@ -25,6 +25,7 @@ using Farplane.FFX2;
 using Farplane.Properties;
 using MahApps.Metro;
 using MahApps.Metro.Controls;
+using ControlzEx.Theming;
 using Farplane.Memory;
 
 namespace Farplane
@@ -51,23 +52,16 @@ namespace Farplane
             try
             {
                 // Load app theme and accent
-                var currentTheme = ThemeManager.GetAppTheme(Settings.Default.AppTheme);
-                var currentAccent = ThemeManager.GetAccent(Settings.Default.AppAccent);
-
-                ThemeManager.ChangeAppStyle(Application.Current, currentAccent, currentTheme);
+                ThemeManager.Current.ChangeTheme(Application.Current, Settings.Default.AppTheme);
             }
             catch
             {
                 // Theme error, revert to default
-                Settings.Default.AppTheme = "BaseLight";
-                Settings.Default.AppAccent = "Blue";
+                Settings.Default.AppTheme = "Light.Blue";
 
                 Settings.Default.Save();
 
-                var currentTheme = ThemeManager.GetAppTheme(Settings.Default.AppTheme);
-                var currentAccent = ThemeManager.GetAccent(Settings.Default.AppAccent);
-
-                ThemeManager.ChangeAppStyle(Application.Current, currentAccent, currentTheme);
+				ThemeManager.Current.ChangeTheme(Application.Current, Settings.Default.AppTheme);
             }
             
             InitializeComponent();

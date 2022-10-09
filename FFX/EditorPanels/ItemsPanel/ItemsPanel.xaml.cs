@@ -9,7 +9,8 @@ using Farplane.Common.Controls;
 using Farplane.FFX.Data;
 using Farplane.FFX.Values;
 using Farplane.Memory;
-using MahApps.Metro;
+using MahApps.Metro.Theming;
+using ControlzEx.Theming;
 
 namespace Farplane.FFX.EditorPanels.ItemsPanel
 {
@@ -44,9 +45,9 @@ namespace Farplane.FFX.EditorPanels.ItemsPanel
         private bool[] _keyItemState;
         private bool[] _alBhedState;
 
-        private static readonly Tuple<AppTheme, Accent> currentStyle = ThemeManager.DetectAppStyle(Application.Current);
-        private readonly Brush _trueKeyItemBrush = new SolidColorBrush((Color)currentStyle.Item1.Resources["BlackColor"]);
-        private readonly Brush _falseKeyItemBrush = new SolidColorBrush((Color)currentStyle.Item1.Resources["Gray2"]);
+        private static readonly Theme currentStyle = ThemeManager.Current.DetectTheme(Application.Current);
+        private readonly Brush _trueKeyItemBrush = new SolidColorBrush((Color)currentStyle.Resources["MahApps.Colors.ThemeForeground"]);
+        private readonly Brush _falseKeyItemBrush = new SolidColorBrush((Color)currentStyle.Resources["MahApps.Colors.Gray2"]);
 
         public ItemsPanel()
         {

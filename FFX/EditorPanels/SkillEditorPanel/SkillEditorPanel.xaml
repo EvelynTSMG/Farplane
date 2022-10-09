@@ -10,7 +10,7 @@
              mc:Ignorable="d">
     <GroupBox Header="Skills">
         <TabControl>
-            <TabItem controls:ControlsHelper.HeaderFontSize="16" Header="Commands">
+            <TabItem FontSize="16" Header="Commands">
                 <local:CommandEditor x:Name="CommandEditor" />
             </TabItem>
         </TabControl>

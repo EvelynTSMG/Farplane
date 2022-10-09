@@ -18,8 +18,9 @@ using Farplane.Common.Controls;
 using Farplane.FFX.Data;
 using Farplane.FFX.Values;
 using Farplane.Memory;
-using MahApps.Metro;
+using MahApps.Metro.Theming;
 using MahApps.Metro.Controls;
+using ControlzEx.Theming;
 
 namespace Farplane.FFX.EditorPanels.Aeons
 {
@@ -42,15 +43,15 @@ namespace Farplane.FFX.EditorPanels.Aeons
         private readonly Ability[] _bMagic = Ability.Abilities.Where(a => a.Type == AbilityType.BlackMagic).ToArray();
         private int _characterIndex = -1;
 
-        private static readonly Tuple<AppTheme, Accent> currentStyle = ThemeManager.DetectAppStyle(Application.Current);
-        private readonly Brush _trueAbilityBrush = new SolidColorBrush((Color)currentStyle.Item1.Resources["BlackColor"]);
-        private readonly Brush _falseAbilityBrush = new SolidColorBrush((Color)currentStyle.Item1.Resources["Gray2"]);
+        private static readonly Theme currentStyle = ThemeManager.Current.DetectTheme(Application.Current);
+        private readonly Brush _trueAbilityBrush = new SolidColorBrush((Color)currentStyle.Resources["MahApps.Colors.ThemeForeground"]);
+        private readonly Brush _falseAbilityBrush = new SolidColorBrush((Color)currentStyle.Resources["MahApps.Colors.Gray2"]);
 
         public AeonAbilities()
         {
             InitializeComponent();
-            foreach(var tabItem in TabAbilities.Items)
-                ControlsHelper.SetHeaderFontSize((TabItem)tabItem, 14);
+            foreach (TabItem tabItem in TabAbilities.Items)
+                tabItem.FontSize = 14;
 
             TabSkills.Content = _gridSkill;
             TabSpecial.Content = _gridSpecial;

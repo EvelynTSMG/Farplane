@@ -38,11 +38,11 @@ namespace Farplane.FFX.EditorPanels.Battle
         {
             InitializeComponent();
 
-            foreach (var tabItem in TabBattle.Items)
-                ControlsHelper.SetHeaderFontSize((UIElement) tabItem, 14);
+            foreach (TabItem tabItem in TabBattle.Items)
+                tabItem.FontSize = 14;
 
-            foreach (var tabItem in TabEntity.Items)
-                ControlsHelper.SetHeaderFontSize((UIElement) tabItem, 14);
+            foreach (TabItem tabItem in TabEntity.Items)
+                tabItem.FontSize = 14;
 
             _canWriteData = true;
         }

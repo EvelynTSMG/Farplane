@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Farplane.Properties;
 using MahApps.Metro;
+using ControlzEx.Theming;
 using MahApps.Metro.Controls;
 
 namespace Farplane.Common.Controls
@@ -29,19 +30,16 @@ namespace Farplane.Common.Controls
         {
             InitializeComponent();
 
-            ComboTheme.ItemsSource = ThemeManager.AppThemes;
-            ComboAccent.ItemsSource = ThemeManager.Accents;
+            ComboTheme.ItemsSource = new List<string> { "Light", "Dark" }; 
+            ComboAccent.ItemsSource = new List<string> { "Red", "Green", "Blue", "Purple", "Orange", "Lime", "Emerald", "Teal", "Cyan", "Cobalt", "Indigo", "Violet", "Pink", "Magenta", "Crimson", "Amber", "Yellow", "Brown", "Olive", "Steel", "Mauve", "Taupe", "Sienna" };
 
-            var currentTheme = ThemeManager.GetAppTheme(Settings.Default.AppTheme);
-            var currentAccent = ThemeManager.GetAccent(Settings.Default.AppAccent);
+			var currentTheme = ThemeManager.Current.ChangeTheme(Application.Current, Settings.Default.AppTheme);
 
-            ComboTheme.SelectedIndex =
-                ThemeManager.AppThemes.ToList().IndexOf(currentTheme);
-
+            ComboTheme.SelectedIndex = currentTheme.Name.Split('.')[0] == "Light" ? 0 : 1;
             ComboAccent.SelectedIndex =
-                ThemeManager.Accents.ToList().IndexOf(currentAccent);
+				new ThemeManager().Themes.Select(x => x.Name.Split('.')[1]).ToList().IndexOf(currentTheme.Name.Split('.')[1]);
 
-            CheckNeverShowUnXWarning.IsChecked = Settings.Default.NeverShowUnXWarning;
+			CheckNeverShowUnXWarning.IsChecked = Settings.Default.NeverShowUnXWarning;
             CheckCloseWithGame.IsChecked = Settings.Default.CloseWithGame;
             CheckShowAllProcesses.IsChecked = Settings.Default.ShowAllProcesses;
 			
@@ -52,7 +50,7 @@ namespace Farplane.Common.Controls
         private void ComboAccent_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (!canSetTheme) return;
-            ThemeManager.ChangeAppStyle(Application.Current, (Accent)ComboAccent.SelectedItem, (AppTheme)ComboTheme.SelectedItem);
+            ThemeManager.Current.ChangeTheme(Application.Current, $"{ComboTheme.SelectedItem}.{ComboAccent.SelectedItem}");
             SettingUpdated(sender, e);
         }
 
@@ -62,9 +60,8 @@ namespace Farplane.Common.Controls
             Settings.Default.NeverShowUnXWarning = CheckNeverShowUnXWarning.IsChecked.Value;
             Settings.Default.CloseWithGame = CheckCloseWithGame.IsChecked.Value;
             Settings.Default.ShowAllProcesses = CheckShowAllProcesses.IsChecked.Value;
-            Settings.Default.AppAccent = (ComboAccent.SelectedItem as Accent).Name;
-            Settings.Default.AppTheme = (ComboTheme.SelectedItem as AppTheme).Name;
-            Settings.Default.Save();
+            Settings.Default.AppTheme = $"{ComboTheme.SelectedItem}.{ComboAccent.SelectedItem}";
+			Settings.Default.Save();
         }
     }
 }

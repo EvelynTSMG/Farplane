@@ -17,8 +17,9 @@ using Farplane.Common.Controls;
 using Farplane.Common.Dialogs;
 using Farplane.FFX.Data;
 using Farplane.FFX.Values;
-using MahApps.Metro;
+using MahApps.Metro.Theming;
 using MahApps.Metro.Controls;
+using ControlzEx.Theming;
 
 namespace Farplane.FFX.EditorPanels.BlitzballPanel
 {
@@ -31,12 +32,12 @@ namespace Farplane.FFX.EditorPanels.BlitzballPanel
         private int _playerIndex = 0;
         private Data.BlitzballPlayer[] _players;
         private ButtonGrid _buttons = new ButtonGrid(3, BlitzballValues.Techs.Length);
-        private static readonly Tuple<AppTheme, Accent> currentStyle = ThemeManager.DetectAppStyle(Application.Current);
+        private static readonly Theme currentStyle = ThemeManager.Current.DetectTheme(Application.Current);
 
         private readonly Brush _trueBrush =
-            new SolidColorBrush((Color) currentStyle.Item1.Resources["BlackColor"]);
+            new SolidColorBrush((Color) currentStyle.Resources["MahApps.Colors.ThemeForeground"]);
 
-        private readonly Brush _falseBrush = new SolidColorBrush((Color) currentStyle.Item1.Resources["Gray2"]);
+        private readonly Brush _falseBrush = new SolidColorBrush((Color) currentStyle.Resources["MahApps.Colors.Gray2"]);
 
         public BlitzballPlayerEditor()
         {

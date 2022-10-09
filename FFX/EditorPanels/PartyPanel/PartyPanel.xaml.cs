@@ -15,8 +15,8 @@ namespace Farplane.FFX.EditorPanels.PartyPanel
         public PartyPanel()
         {
             InitializeComponent();
-            foreach(var tab  in TabPartySelect.Items)
-                ControlsHelper.SetHeaderFontSize((TabItem)tab, 14);
+            foreach (TabItem tab in TabPartySelect.Items)
+                tab.FontSize = 14;
             Refresh();
         }
 

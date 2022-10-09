@@ -10,16 +10,16 @@
              mc:Ignorable="d">
     <GroupBox Header="Blitzball">
         <TabControl>
-            <TabItem controls:ControlsHelper.HeaderFontSize="18" Header="League">
+            <TabItem FontSize="18" Header="League">
                 <local:BlitzballLeagueEditor x:Name="LeagueEditor" Margin="0" />
             </TabItem>
-            <TabItem controls:ControlsHelper.HeaderFontSize="18" Header="Tournament">
+            <TabItem FontSize="18" Header="Tournament">
                 <local:BlitzballTournamentEditor x:Name="TournamentEditor" Margin="0" />
             </TabItem>
-            <TabItem controls:ControlsHelper.HeaderFontSize="18" Header="Players">
+            <TabItem FontSize="18" Header="Players">
                 <local:BlitzballPlayerEditor x:Name="PlayerEditor" />
             </TabItem>
-            <TabItem controls:ControlsHelper.HeaderFontSize="18" Header="Teams">
+            <TabItem FontSize="18" Header="Teams">
                 <local:BlitzballTeamEditor x:Name="TeamEditor" />
             </TabItem>
             <!-- <TabItem controls:ControlsHelper.HeaderFontSize="18" Header="Current Game">

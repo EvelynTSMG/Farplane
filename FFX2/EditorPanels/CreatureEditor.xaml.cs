@@ -46,7 +46,7 @@ namespace Farplane.FFX2.EditorPanels
             Refresh();
 
             foreach (TabItem tabControl in CreatureTab.Items)
-                ControlsHelper.SetHeaderFontSize(tabControl, 18);
+                tabControl.FontSize = 18;
         }
 
         public void Refresh()

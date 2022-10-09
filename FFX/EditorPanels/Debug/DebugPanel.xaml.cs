@@ -64,7 +64,6 @@ namespace Farplane.FFX.EditorPanels.Debug
             Unknown17.Visibility = visible ? Visibility.Visible : Visibility.Hidden;
             Unknown18.Visibility = visible ? Visibility.Visible : Visibility.Hidden;
             Unknown19.Visibility = visible ? Visibility.Visible : Visibility.Hidden;
-            Unknown20.Visibility = visible ? Visibility.Visible : Visibility.Hidden;
         }
     }
 }
